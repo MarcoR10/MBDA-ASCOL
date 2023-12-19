@@ -5,16 +5,6 @@ FROM Partido
 ORDER BY Asistencia DESC
 FETCH FIRST 1 ROW ONLY;
 
-/*¿ Cual es el Jugador con mas patrocinadores?*/
-SELECT j.id_jugador, j.Nombre,
-    (f.Fuerza + f.Velocidad + f.Agilidad + f.Felxibilidad) AS Rendimiento_Fisico,
-    (m.Personalidad + m.Emosional + m.Estres) AS Rendimiento_Mental
-FROM Jugador j
-JOIN Fisica f ON j.id_jugador = f.Jugador
-JOIN Mental m ON j.id_jugador = m.Jugador
-ORDER BY (Rendimiento_Fisico + Rendimiento_Mental) DESC
-FETCH FIRST 1 ROW ONLY;
-
 /*¿Cual es el jugador con mejor rendimiento fisico y mental?*/
 
 SELECT j.id_jugador, j.Nombre, COUNT(p.Nit) AS Total_Patrocinadores
@@ -23,3 +13,22 @@ LEFT JOIN Patrocinadores p ON j.Patrocinador = p.Nit
 GROUP BY j.id_jugador, j.Nombre
 ORDER BY Total_Patrocinadores DESC
 FETCH FIRST 1 ROW ONLY;
+
+--Consulta : Obtener todos los partidos que se jugaron en un estadio específico
+
+SELECT *
+FROM Partido
+WHERE Estadio = 'NombreDelEstadio';
+
+--Consulta : Mostrar los estadios y la cantidad de partidos que se jugaron en cada uno
+
+SELECT Estadio, COUNT(*) AS Cantidad_de_Partidos
+FROM Partido
+GROUP BY Estadio;
+
+--: Obtener los eventos ocurridos en un partido específico
+
+SELECT *
+FROM Eventos_Partido
+WHERE Partido = '1';
+

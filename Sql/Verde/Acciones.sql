@@ -1,25 +1,31 @@
--- Definir acción de referencia en Fisica
-ALTER TABLE Fisica 
-ADD CONSTRAINT FK_Fisica_Evaluacion 
-FOREIGN KEY (Numero, Jugador) 
-REFERENCES Evaluacion (Numero, Jugador)
-ON DELETE CASCADE;
--- Definir acción de referencia en Jugador
-ALTER TABLE Jugador 
-ADD CONSTRAINT FK_Jugador_Equipo 
-FOREIGN KEY (Equipo) 
-REFERENCES Equipo (Id_Equipo)
-ON DELETE CASCADE;
--- Definir acción de referencia en Mental
-ALTER TABLE Mental 
-ADD CONSTRAINT FK_Mental_Evaluacion 
-FOREIGN KEY (Numero, Jugador) 
-REFERENCES Evaluacion (Numero, Jugador)
-ON DELETE SET NULL;
---AccionesOK---
--- Eliminar una Evaluacion con 
-DELETE FROM Evaluacion WHERE Numero = 1 AND Jugador = '001';
--- La acción CASCADE eliminará automáticamente las filas correspondientes en Fisica y Mental.
--- Actualizar un Jugador en Evaluacion 
-UPDATE Evaluacion SET Jugador = NULL WHERE Numero = 2 AND Jugador = '002';
--- La acción SET NULL establecerá automáticamente el campo Jugador en NULL en Fisica y Mental.
+
+/* Jugador */
+ALTER TABLE Jugador DROP CONSTRAINT FK_Jugador_Equipo;
+ALTER TABLE Jugador ADD CONSTRAINT FK_Jugador_Equipo
+FOREIGN KEY (Equipo) REFERENCES Equipo(Id_Equipo) ON DELETE CASCADE;
+
+/* Partido */
+ALTER TABLE Partido DROP CONSTRAINT FK_Partido_Equipo_L;
+ALTER TABLE Partido ADD CONSTRAINT FK_Partido_Equipo_L
+FOREIGN KEY (Equipo_L) REFERENCES Equipo (Id_Equipo) ON DELETE CASCADE;
+
+/* Eventos_Partido */
+ALTER TABLE Eventos_Partido DROP CONSTRAINT FK_Eventos_Partido;
+ALTER TABLE Eventos_Partido ADD CONSTRAINT FK_Eventos_Partido
+FOREIGN KEY (Partido) REFERENCES Partido (Id_Partido) ON DELETE CASCADE;
+
+/* Medios */
+ALTER TABLE Medios DROP CONSTRAINT FK_Medios;
+ALTER TABLE Medios ADD CONSTRAINT FK_Medios
+FOREIGN KEY (Evento) REFERENCES Eventos_Partido (id_evento)ON DELETE CASCADE;
+
+/* Aficionados */
+ALTER TABLE Aficionados DROP CONSTRAINT FK_Aficionados_Medio;
+ALTER TABLE Aficionados ADD CONSTRAINT FK_Aficionados_Medio
+FOREIGN KEY (Medio_F) REFERENCES Medios(Nit) ON DELETE CASCADE;
+
+/* Aficionados2 */
+ALTER TABLE Aficionados DROP CONSTRAINT FK_Aficionados_Asistencia;
+ALTER TABLE Aficionados ADD CONSTRAINT FK_Aficionados_Asistencia
+FOREIGN KEY (Asistencia) REFERENCES Estadio (Nombre) ON DELETE CASCADE;
+

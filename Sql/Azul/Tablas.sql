@@ -55,14 +55,14 @@ CREATE TABLE Partido(
     Equipo_L VARCHAR2(40) NOT NULL, 
     Equipo_V VARCHAR2(40) NOT NULL, 
     Fecha DATE NOT NULL,
-    Arbitro VARCHAR2(10) NOT NULL,
+    Arbitro VARCHAR2(25) NOT NULL,
     Marcador VARCHAR2(20) NOT NULL,
     Estadio VARCHAR2(30) NOT NULL,
     Asistencia NUMBER NOT NULL
 );
 
 CREATE TABLE Arbitro(
-    Id_Arbitro VARCHAR2(10) NOT NULL, 
+    Id_Arbitro VARCHAR2(25) NOT NULL, 
     Nombre VARCHAR2(20) NOT NULL,
     Posicion VARCHAR2(25) NOT NULL,
     Pais VARCHAR2(25) NOT NULL,
@@ -72,7 +72,7 @@ CREATE TABLE Arbitro(
 CREATE TABLE Eventos_Partido(
     id_evento NUMBER NOT NULL,
     Partido VARCHAR2(40) NOT NULL, 
-    Arbitro VARCHAR2(20) NOT NULL,
+    Arbitro VARCHAR2(25) NOT NULL,
     T_Amarillas NUMBER ,
     T_Rojas NUMBER ,
     Faltas NUMBER ,
@@ -86,7 +86,7 @@ CREATE TABLE Estadio(
     Capacidad NUMBER NOT NULL,
     Pais VARCHAR2(20) NOT NULL,
     Ubicacion NUMBER NOT NULL,
-    Inaguracion DATE NOT NULL
+    Inauguracion DATE NOT NULL
 );
 
 CREATE TABLE Medios(

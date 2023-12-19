@@ -1,0 +1,13 @@
+-- Drop Indices
+DROP INDEX idx_nombre_jugador;
+DROP INDEX idx_ubicacion_equipo;
+DROP INDEX idx_posicion_jugador;
+DROP INDEX idx_partido_evento;
+DROP INDEX idx_arbitro_evento;
+DROP INDEX idx_fecha_partido;
+DROP INDEX idx_equipo_local;
+DROP INDEX idx_equipo_visitante;
+-- Drop Vistas
+DROP VIEW VistaJugadorEquipo;
+DROP VIEW VistaEventosPartido;
+DROP VIEW Vista_JugadoresEquipos;
