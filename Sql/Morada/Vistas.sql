@@ -19,3 +19,9 @@ FROM Jugador j
 INNER JOIN Equipo e ON j.Equipo = e.Id_Equipo;
 
 
+CREATE VIEW Vista_Jugador_Equipo_Patrocinador AS
+SELECT j.id_jugador, j.Nombre AS Nombre_Jugador, j.Equipo,
+       e.Nombre AS Nombre_Equipo, p.Nombre AS Nombre_Patrocinador
+FROM Jugador j
+INNER JOIN Equipo e ON j.Equipo = e.Id_Equipo
+INNER JOIN Patrocinadores p ON j.Patrocinador = p.Nit;

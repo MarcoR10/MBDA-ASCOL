@@ -200,38 +200,6 @@ VALUES ('Estadio José Alvalade', 50865, 'Portugal', 4, TO_DATE('06-08-2003', 'DD
 INSERT INTO Estadio (Nombre, Capacidad, Pais, Ubicacion, Inauguracion)
 VALUES ('Vodafone Park', 41703, 'Turquía', 6, TO_DATE('19-11-2016', 'DD-MM-YYYY'));
 
-
--- partidos
-INSERT INTO Partido (Id_Partido, Equipo_L, Equipo_V, Fecha, Arbitro, Marcador, Estadio, Asistencia)
-VALUES ('P001', 'E001', 'E002', TO_DATE('2023-01-15', 'YYYY-MM-DD'), 'Michael Oliver', '3-2', 'Santiago Bernabeu', 80000);
-
-INSERT INTO Partido (Id_Partido, Equipo_L, Equipo_V, Fecha, Arbitro, Marcador, Estadio, Asistencia)
-VALUES ('P002', 'E003', 'E011', TO_DATE('2023-02-20', 'YYYY-MM-DD'), 'Felix Brych', '2-1', 'Allianz Arena', 70000);
-
-INSERT INTO Partido (Id_Partido, Equipo_L, Equipo_V, Fecha, Arbitro, Marcador, Estadio, Asistencia)
-VALUES ('P003', 'E004', 'E014', TO_DATE('2023-03-05', 'YYYY-MM-DD'), 'Anthony Taylor', '1-0', 'Etihad Stadium', 65000);
-
-INSERT INTO Partido (Id_Partido, Equipo_L, Equipo_V, Fecha, Arbitro, Marcador, Estadio, Asistencia)
-VALUES ('P004', 'E005', 'E004', TO_DATE('2023-04-10', 'YYYY-MM-DD'), 'Martin Atkinson', '2-2', 'Anfield', 75000);
-
-INSERT INTO Partido (Id_Partido, Equipo_L, Equipo_V, Fecha, Arbitro, Marcador, Estadio, Asistencia)
-VALUES ('P005', 'E009', 'E010', TO_DATE('2023-05-17', 'YYYY-MM-DD'), 'Gianluca Rocchi', '3-1', 'Allianz Stadium', 60000);
-
-INSERT INTO Partido (Id_Partido, Equipo_L, Equipo_V, Fecha, Arbitro, Marcador, Estadio, Asistencia)
-VALUES ('P006', 'E006', 'E010', TO_DATE('2023-06-25', 'YYYY-MM-DD'), 'Daniele Orsato', '2-2', 'San Siro', 65000);
-
-INSERT INTO Partido (Id_Partido, Equipo_L, Equipo_V, Fecha, Arbitro, Marcador, Estadio, Asistencia)
-VALUES ('P007', 'E008', 'E001', TO_DATE('2023-07-12', 'YYYY-MM-DD'), 'Jose Luis Gonzalez', '1-1', 'Wanda Metropolitano', 60000);
-
-INSERT INTO Partido (Id_Partido, Equipo_L, Equipo_V, Fecha, Arbitro, Marcador, Estadio, Asistencia)
-VALUES ('P008', 'E007', 'E004', TO_DATE('2023-08-05', 'YYYY-MM-DD'), 'Bjorn Kuipers', '3-0', 'Johan Cruyff Arena', 54000);
-
-INSERT INTO Partido (Id_Partido, Equipo_L, Equipo_V, Fecha, Arbitro, Marcador, Estadio, Asistencia)
-VALUES ('P009', 'E013', 'E003', TO_DATE('2023-09-18', 'YYYY-MM-DD'), 'Felix Zwayer', '1-3', 'Signal Iduna Park', 66000);
-
-INSERT INTO Partido (Id_Partido, Equipo_L, Equipo_V, Fecha, Arbitro, Marcador, Estadio, Asistencia)
-VALUES ('P010', 'E014', 'E005', TO_DATE('2023-10-22', 'YYYY-MM-DD'), 'Craig Pawson', '0-0', 'Old Trafford', 72000);
-
 -- ARBITROS
 
 INSERT INTO Arbitro (Id_Arbitro, Nombre, Posicion, Pais, Experiencia)
@@ -264,37 +232,70 @@ VALUES ('AR009', 'Artur Soares Dias', 'Árbitro principal', 'Portugal', 12);
 INSERT INTO Arbitro (Id_Arbitro, Nombre, Posicion, Pais, Experiencia)
 VALUES ('AR010', 'Clement Turpin', 'Árbitro principal', 'Francia', 13);
 
+
+-- partidos
+INSERT INTO Partido (Id_Partido, Equipo_L, Equipo_V, Fecha, Arbitro, Marcador, Estadio, Asistencia)
+VALUES ('P001', 'E001', 'E002', TO_DATE('2023-01-15', 'YYYY-MM-DD'), 'AR001', '3-2', 'Santiago Bernabeu', 80000);
+
+INSERT INTO Partido (Id_Partido, Equipo_L, Equipo_V, Fecha, Arbitro, Marcador, Estadio, Asistencia)
+VALUES ('P002', 'E003', 'E011', TO_DATE('2023-02-20', 'YYYY-MM-DD'), 'AR002', '2-1', 'Allianz Arena', 70000);
+
+INSERT INTO Partido (Id_Partido, Equipo_L, Equipo_V, Fecha, Arbitro, Marcador, Estadio, Asistencia)
+VALUES ('P003', 'E004', 'E014', TO_DATE('2023-03-05', 'YYYY-MM-DD'), 'AR003', '1-0', 'Etihad Stadium', 65000);
+
+INSERT INTO Partido (Id_Partido, Equipo_L, Equipo_V, Fecha, Arbitro, Marcador, Estadio, Asistencia)
+VALUES ('P004', 'E005', 'E004', TO_DATE('2023-04-10', 'YYYY-MM-DD'), 'AR004', '2-2', 'Anfield', 75000);
+
+INSERT INTO Partido (Id_Partido, Equipo_L, Equipo_V, Fecha, Arbitro, Marcador, Estadio, Asistencia)
+VALUES ('P005', 'E009', 'E010', TO_DATE('2023-05-17', 'YYYY-MM-DD'), 'AR005', '3-1', 'Allianz Stadium', 60000);
+
+INSERT INTO Partido (Id_Partido, Equipo_L, Equipo_V, Fecha, Arbitro, Marcador, Estadio, Asistencia)
+VALUES ('P006', 'E006', 'E010', TO_DATE('2023-06-25', 'YYYY-MM-DD'), 'AR006', '2-2', 'San Siro', 65000);
+
+INSERT INTO Partido (Id_Partido, Equipo_L, Equipo_V, Fecha, Arbitro, Marcador, Estadio, Asistencia)
+VALUES ('P007', 'E008', 'E001', TO_DATE('2023-07-12', 'YYYY-MM-DD'), 'AR007', '1-1', 'Parc des Princes', 60000);
+
+INSERT INTO Partido (Id_Partido, Equipo_L, Equipo_V, Fecha, Arbitro, Marcador, Estadio, Asistencia)
+VALUES ('P008', 'E007', 'E004', TO_DATE('2023-08-05', 'YYYY-MM-DD'), 'AR008', '3-0', 'Johan Cruyff Arena', 54000);
+
+INSERT INTO Partido (Id_Partido, Equipo_L, Equipo_V, Fecha, Arbitro, Marcador, Estadio, Asistencia)
+VALUES ('P009', 'E013', 'E003', TO_DATE('2023-09-18', 'YYYY-MM-DD'), 'AR009', '1-3', 'Signal Iduna Park', 66000);
+
+INSERT INTO Partido (Id_Partido, Equipo_L, Equipo_V, Fecha, Arbitro, Marcador, Estadio, Asistencia)
+VALUES ('P010', 'E014', 'E005', TO_DATE('2023-10-22', 'YYYY-MM-DD'), 'AR010', '0-0', 'Old Trafford', 72000);
+
+
 -----Eventos_Partido
 
 INSERT INTO Eventos_Partido (id_evento, Partido, Arbitro, T_Amarillas, T_Rojas, Faltas, Esquinas, Fuera_juego, Susituciones)
-VALUES (1, 'Real Madrid vs. FC Barcelona', 'AR001', 4, 0, 12, 6, 3, 5);
+VALUES (1, 'P001', 'AR001', 4, 0, 12, 6, 3, 5);
 
 INSERT INTO Eventos_Partido (id_evento, Partido, Arbitro, T_Amarillas, T_Rojas, Faltas, Esquinas, Fuera_juego, Susituciones)
-VALUES (2, 'Bayern Munich vs. Manchester City', 'AR002', 3, 1, 15, 8, 2, 4);
+VALUES (2, 'P002', 'AR002', 3, 1, 15, 8, 2, 4);
 
 INSERT INTO Eventos_Partido (id_evento, Partido, Arbitro, T_Amarillas, T_Rojas, Faltas, Esquinas, Fuera_juego, Susituciones)
-VALUES (3, 'Liverpool FC vs. AC Milan', 'AR003', 2, 0, 10, 5, 1, 3);
+VALUES (3, 'P003', 'AR003', 2, 0, 10, 5, 1, 3);
 
 INSERT INTO Eventos_Partido (id_evento, Partido, Arbitro, T_Amarillas, T_Rojas, Faltas, Esquinas, Fuera_juego, Susituciones)
-VALUES (4, 'Paris S vs. Manchester United', 'AR004', 5, 2, 18, 10, 4, 6);
+VALUES (4, 'P004', 'AR004', 5, 2, 18, 10, 4, 6);
 
 INSERT INTO Eventos_Partido (id_evento, Partido, Arbitro, T_Amarillas, T_Rojas, Faltas, Esquinas, Fuera_juego, Susituciones)
-VALUES (5, 'Juventus FC vs. Borussia Dortmund', 'AR005', 4, 1, 14, 7, 3, 5);
+VALUES (5, 'P005', 'AR005', 4, 1, 14, 7, 3, 5);
 
 INSERT INTO Eventos_Partido (id_evento, Partido, Arbitro, T_Amarillas, T_Rojas, Faltas, Esquinas, Fuera_juego, Susituciones)
-VALUES (6, 'Inter Milan vs. Atletico Madrid', 'AR006', 3, 0, 11, 7, 2, 4);
+VALUES (6, 'P006', 'AR006', 3, 0, 11, 7, 2, 4);
 
 INSERT INTO Eventos_Partido (id_evento, Partido, Arbitro, T_Amarillas, T_Rojas, Faltas, Esquinas, Fuera_juego, Susituciones)
-VALUES (7, 'Ajax Amsterdam vs. Liverpool FC', 'AR007', 2, 0, 8, 4, 1, 2);
+VALUES (7, 'P007', 'AR007', 2, 0, 8, 4, 1, 2);
 
 INSERT INTO Eventos_Partido (id_evento, Partido, Arbitro, T_Amarillas, T_Rojas, Faltas, Esquinas, Fuera_juego, Susituciones)
-VALUES (8, 'Juventus FC vs. Real Madrid', 'AR008', 4, 1, 14, 8, 3, 5);
+VALUES (8, 'P008', 'AR008', 4, 1, 14, 8, 3, 5);
 
 INSERT INTO Eventos_Partido (id_evento, Partido, Arbitro, T_Amarillas, T_Rojas, Faltas, Esquinas, Fuera_juego, Susituciones)
-VALUES (9, 'Manchester City vs. Paris Saint-Germain', 'AR009', 5, 2, 18, 9, 4, 6);
+VALUES (9, 'P009', 'AR009', 5, 2, 18, 9, 4, 6);
 
 INSERT INTO Eventos_Partido (id_evento, Partido, Arbitro, T_Amarillas, T_Rojas, Faltas, Esquinas, Fuera_juego, Susituciones)
-VALUES (10, 'FC Barcelona vs. Bayern Munich', 'AR010', 3, 1, 12, 6, 2, 4);
+VALUES (10, 'P010', 'AR010', 3, 1, 12, 6, 2, 4);
 
 ------Medios
 
@@ -331,34 +332,34 @@ VALUES ('NIT010', 'SportingTimes', 'Revista', 'sportingtimes', 10);
 ---Aficionados
 
 INSERT INTO Aficionados (Carnet, Nombre, Boleto, Medio_F, Asistencia)
-VALUES ('AFC001', 'Juan Perez', 1254, 'SportsNow', 'Estadio');
+VALUES ('AFC001', 'Juan Perez', 1254, 'NIT001', 'Camp Nou');
 
 INSERT INTO Aficionados (Carnet, Nombre, Boleto, Medio_F, Asistencia)
-VALUES ('AFC002', 'Ana Garcia', 2245, 'LiveSportsTV', 'Casa');
+VALUES ('AFC002', 'Ana Garcia', 2245, 'NIT002', 'Estadio José Alvalade');
 
 INSERT INTO Aficionados (Carnet, Nombre, Boleto, Medio_F, Asistencia)
-VALUES ('AFC003', 'Carlos López', 1897, 'GoalUpdates', 'Estadio');
+VALUES ('AFC003', 'Carlos López', 1897, 'NIT003', 'Estadio José Alvalade');
 
 INSERT INTO Aficionados (Carnet, Nombre, Boleto, Medio_F, Asistencia)
-VALUES ('AFC004', 'Sofía Ramirez', 3321, 'SportsRadioFM', 'Estadio');
+VALUES ('AFC004', 'Sofía Ramirez', 3321, 'NIT004', 'Emirates Stadium');
 
 INSERT INTO Aficionados (Carnet, Nombre, Boleto, Medio_F, Asistencia)
-VALUES ('AFC005', 'Diego Martinez', 1455, 'SportingTimes', 'Casa');
+VALUES ('AFC005', 'Diego Martinez', 1455, 'NIT005', 'Allianz Arena');
 
 INSERT INTO Aficionados (Carnet, Nombre, Boleto, Medio_F, Asistencia)
-VALUES ('AFC006', 'Laura Gómez', 2798, 'LiveSportsTV', 'Estadio');
+VALUES ('AFC006', 'Laura Gómez', 2798, 'NIT006', 'San Siro');
 
 INSERT INTO Aficionados (Carnet, Nombre, Boleto, Medio_F, Asistencia)
-VALUES ('AFC007', 'Pedro Hernández', 1943, 'SportsNow', 'Casa');
+VALUES ('AFC007', 'Pedro Hernández', 1943, 'NIT007', 'Estadio Metropolitano');
 
 INSERT INTO Aficionados (Carnet, Nombre, Boleto, Medio_F, Asistencia)
-VALUES ('AFC008', 'María Torres', 3010, 'GoalUpdates', 'Estadio');
+VALUES ('AFC008', 'María Torres', 3010, 'NIT009', 'San Siro');
 
 INSERT INTO Aficionados (Carnet, Nombre, Boleto, Medio_F, Asistencia)
-VALUES ('AFC009', 'Javier Rodríguez', 2145, 'SportsRadioFM', 'Casa');
+VALUES ('AFC009', 'Javier Rodríguez', 2145, 'NIT010', 'Vodafone Park');
 
 INSERT INTO Aficionados (Carnet, Nombre, Boleto, Medio_F, Asistencia)
-VALUES ('AFC010', 'Andrea Ruiz', 2567, 'SportingTimes', 'Estadio');
+VALUES ('AFC010', 'Andrea Ruiz', 2567, 'NIT010', 'Signal Iduna Park');
 
 -- Inserciones en la tabla Evaluacion
 INSERT INTO Evaluacion (Numero, Jugador)

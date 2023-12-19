@@ -7,6 +7,8 @@ DROP INDEX idx_arbitro_evento;
 DROP INDEX idx_fecha_partido;
 DROP INDEX idx_equipo_local;
 DROP INDEX idx_equipo_visitante;
+DROP INDEX idx_nombre_patrocinador);
+DROP INDEX idx_id_equipo;
 -- Drop Vistas
 DROP VIEW VistaJugadorEquipo;
 DROP VIEW VistaEventosPartido;

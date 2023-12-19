@@ -13,3 +13,8 @@ CREATE INDEX idx_fecha_partido ON Partido(Fecha);
 CREATE INDEX idx_equipo_local ON Partido(Equipo_L);
 
 CREATE INDEX idx_equipo_visitante ON Partido(Equipo_V);
+
+CREATE INDEX idx_nombre_patrocinador ON Patrocinadores(Nombre);
+
+CREATE INDEX idx_id_equipo ON Equipo(Nombre);
+
